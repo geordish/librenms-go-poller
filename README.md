@@ -27,7 +27,9 @@ clone the poller into src/librenms
 
 Build the components
 `go install librenms/controller`
+
 `go install librenms/worker`
+
 `go install librenms/storage/screen`
 
 Copy default.yaml into /bin directory
@@ -56,6 +58,7 @@ There are a number of places where the definition for an OS cannot be loaded due
 
 This needs changing to:
 ` - OID:
+
     - 1.2.3.4.5`
 
 There are a few other instances where this is the case, such as sysDescr
