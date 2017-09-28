@@ -62,8 +62,8 @@ There are a few other instances where this is the case, such as sysDescr
 
 # Further work
 There is a lot that needs to be done to make this remotely usable. 
-    * Make the project adhere to Effective Go guidelines (https://golang.org/doc/effective_go.html)
-    * Implement a decent SNMP collector
-    * Modularise the polling modules cleanly (Go Plugins perhaps?)
-    * Actually implement some storage strategies
+* Make the project adhere to Effective Go guidelines (https://golang.org/doc/effective_go.html)
+* Implement a decent SNMP collector
+* Modularise the polling modules cleanly (Go Plugins perhaps?)
+* Actually implement some storage strategies
 
