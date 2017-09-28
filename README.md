@@ -36,10 +36,10 @@ Copy default.yaml into /bin directory
 Copy OS definitions into bin directory
 `cp -R /opt/librenms/includes/definitions bin/`
 
-#Configuration
+# Configuration
 Configuration for the AMQP server and database is possible within default.yaml
 
-#Running
+# Running
 The controller is (currently) designed to work on a cron job. It sends a list of jobs to a Queue within RabbitMQ. This queue is defined to hand out each job to an avaliable worker
 
 The worker runs indefinitely. Multiple of these can be run across different servers. This should help the poller scale horizontally. Once the worker has processed a job, it writes the collected stats into another RabbitMQ queue. 
@@ -48,7 +48,7 @@ This queue is defined as a fanout queue, meaning each listener gets a copy of th
  
 Currently there is no actual storage of data. The only stats storage strategy currently implements just dumps the stats out to a terminal
 
-#Known Issues
+# Known Issues
 We have been a bit fast and loose in the past with the YAML OS definitions (I'm not sure if this is allowed in the spec. I assume it is since PHP has no issues with parsing it)
 
 There are a number of places where the definition for an OS cannot be loaded due to a syntax error. Most of these are quite simple. Something like the following has been done:
@@ -60,7 +60,7 @@ This needs changing to:
 
 There are a few other instances where this is the case, such as sysDescr
 
-#Further work
+# Further work
 There is a lot that needs to be done to make this remotely usable. 
     * Make the project adhere to Effective Go guidelines (https://golang.org/doc/effective_go.html)
     * Implement a decent SNMP collector
